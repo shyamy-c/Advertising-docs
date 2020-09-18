@@ -1,6 +1,6 @@
 ---
 title: "BingAdsApp object"
-description: "The top-level object used to navigate all entities in a single account."
+description: "The top-level object used to navigate all entities in a single account (supported for backwards compatibility only)."
 author: "swhite-msft"
 manager: ehansen
 

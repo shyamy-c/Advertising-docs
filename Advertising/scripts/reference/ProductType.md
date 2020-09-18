@@ -1,7 +1,7 @@
 ---
 title: "ProductType"
 subtitle: "Scripts"
-description: "Contains the methods used to manage the product group."
+description: "Contains the methods used to manage the type product group."
 author: "swhite-msft"
 manager: ehansen
 
