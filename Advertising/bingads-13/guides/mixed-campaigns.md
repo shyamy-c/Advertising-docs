@@ -56,10 +56,7 @@ Here's an example [AddCampaigns](../campaign-management-service/addcampaigns.md)
 ## <a name="adgroup-campaignservice"></a>Create ad groups
 You must create exactly one [AdGroup](../campaign-management-service/adgroup.md) in each mixed campaign by calling the [AddAdGroups](../campaign-management-service/addadgroups.md) operation. 
 
-The following validation rules are unique to mixed campaigns, and do not apply to standard Microsoft shopping campaigns: 
-
-- The BiddingScheme element must either be null or InheritFromParentBiddingScheme.  
-- The Network element must be null and will always default to OwnedAndOperatedAndSyndicatedSearch. 
+Please note the [AdGroupType](../campaign-management-service/adgroup.md#adgrouptype) is not required and will default to "SearchStandard". 
 
 ```xml
 <AddAdGroupsRequest xmlns="https://bingads.microsoft.com/CampaignManagement/v13">
@@ -83,6 +80,16 @@ The following validation rules are unique to mixed campaigns, and do not apply t
     <ReturnInheritedBidStrategyTypes>false</ReturnInheritedBidStrategyTypes>
 </AddAdGroupsRequest>
 ```
+
+Supported entities vary by ad group type. For example "SearchStandard" ad groups only support dynamic search ads. Search add groups support expanded text ads and responsive search ads. 
+
+Some entities and settings are restricted by ad group type.  
+
+- If the ad group type is "SearchDynamic", you can only add dynamic search ads. 
+- If the ad group type is "SearchStandard" you can add expanded text ads or responsive search ads. 
+- You can only apply [Webpage](../campaign-management-service/webpage.md) criterion to a "SearchDynamic" ad group. 
+
+Other settings such as location targets and remarketing lists can be applied regardless of the ad group type. 
 
 ## See Also
 [Bing Ads API Web Service Addresses](web-service-addresses.md)  
