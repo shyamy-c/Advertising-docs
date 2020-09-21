@@ -4,7 +4,7 @@ ms.service: bing-ads-customer-management-service
 ms.topic: article
 author: eric-urban
 ms.author: eur
-description: Gets a list of the pilot programs that are enabled for the specified account.
+description: Gets a list of the feature pilot IDs that are enabled for an ad account.
 dev_langs: 
   - csharp
   - java
@@ -12,10 +12,10 @@ dev_langs:
   - python
 ---
 # GetAccountPilotFeatures Service Operation - Customer Management
-Gets a list of the pilot programs that are enabled for the specified account.  
+Gets a list of the feature pilot IDs that are enabled for an ad account.  
 
 > [!NOTE]
-> This operation is reserved for future use. 
+> Use the [GetCustomerPilotFeatures](getcustomerpilotfeatures.md) operation to get customer level feature pilot IDs. 
 
 ## <a name="request"></a>Request Elements
 The *GetAccountPilotFeaturesRequest* object defines the [body](#request-body) and [header](#request-header) elements of the service operation request. The elements must be in the same order as shown in the [Request SOAP](#request-soap). 
@@ -27,7 +27,7 @@ The *GetAccountPilotFeaturesRequest* object defines the [body](#request-body) an
 
 |Element|Description|Data Type|
 |-----------|---------------|-------------|
-|<a name="accountid"></a>AccountId|The identifier of the account used to get a list of pilot features.|**long**|
+|<a name="accountid"></a>AccountId|The identifier of the account used to get a list of feature pilot IDs.|**long**|
 
 ### <a name="request-header"></a>Request Header Elements
 [!INCLUDE[request-header](./includes/request-header.md)]
@@ -39,7 +39,7 @@ The *GetAccountPilotFeaturesResponse* object defines the [body](#response-body) 
 
 |Element|Description|Data Type|
 |-----------|---------------|-------------|
-|<a name="featurepilotflags"></a>FeaturePilotFlags|A list of integers that identifies the pilot features that are enabled for all of the customer's accounts.<br/><br/>Currently there are not any available account level pilot features.|**int** array|
+|<a name="featurepilotflags"></a>FeaturePilotFlags|A list of integers that identify the feature pilots that are enabled for the ad account.<br/><br/>For more information about pilot participation please contact your account manager.<br/><br/>For example the following values correspond to ad account level feature pilots.<br/><br/>791 - Mixed Campaigns with Multiple Ad Group Types|**int** array|
 
 ### <a name="response-header"></a>Response Header Elements
 [!INCLUDE[response-header](./includes/response-header.md)]
