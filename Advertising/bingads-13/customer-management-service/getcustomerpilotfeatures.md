@@ -15,7 +15,7 @@ dev_langs:
 Gets a list of the feature pilot IDs that are enabled for all ad accounts owned by a customer (manager account).
 
 > [!NOTE]
-> A pilot flag might only be enabled for a subset of ad accounts under a customer. Use the [GetAccountPilotFeatures](getaccountpilotfeatures.md) operation to get ad account level feature pilot IDs. 
+> A pilot flag might only be enabled for a subset of ad accounts under a customer. Use the [GetAccountPilotFeatures](getaccountpilotfeatures.md) operation to get ad account level feature pilot IDs. To get a list of all pilots that are enabled for a specific account you must call both [GetCustomerPilotFeatures](getcustomerpilotfeatures.md) and [GetAccountPilotFeatures](getaccountpilotfeatures.md) operations and combine the results. To confirm whether a specific feature is enabled for a customer’s accounts you could first call the [GetCustomerPilotFeatures](getcustomerpilotfeatures.md) operation and if the pilot flag is not returned you could then call the [GetAccountPilotFeatures](getaccountpilotfeatures.md) operation.  
 
 ## <a name="request"></a>Request Elements
 The *GetCustomerPilotFeaturesRequest* object defines the [body](#request-body) and [header](#request-header) elements of the service operation request. The elements must be in the same order as shown in the [Request SOAP](#request-soap). 
