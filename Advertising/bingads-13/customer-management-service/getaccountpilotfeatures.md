@@ -12,10 +12,10 @@ dev_langs:
   - python
 ---
 # GetAccountPilotFeatures Service Operation - Customer Management
-Gets a list of the feature pilot IDs that are enabled for an ad account.  
+Gets a list of the feature pilot IDs that are enabled for an ad account. 
 
 > [!NOTE]
-> Use the [GetCustomerPilotFeatures](getcustomerpilotfeatures.md) operation to get customer level feature pilot IDs. 
+> Use the [GetCustomerPilotFeatures](getcustomerpilotfeatures.md) operation to get customer level feature pilot IDs. A pilot flag can be enabled at both the customer and ad account level. Account level pilot flags remain in effect for the account, even if the account is transferred to a different customer that is not enabled for the pilot. For more information about account ownership transfers, please contact your account manager. 
 
 ## <a name="request"></a>Request Elements
 The *GetAccountPilotFeaturesRequest* object defines the [body](#request-body) and [header](#request-header) elements of the service operation request. The elements must be in the same order as shown in the [Request SOAP](#request-soap). 

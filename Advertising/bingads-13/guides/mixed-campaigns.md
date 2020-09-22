@@ -14,7 +14,7 @@ And of course, now you can also import your mixed campaigns from Google Ads. onc
 You can add dynamic search ad groups to an existing search campaign, unless it is the base campaign of an experiment. Likewise you cannot create a new experiment campaign based on a mixed campaign. Experiments only support search campaigns without dynamic search ads settings. 
 
 > [!NOTE]
-> Mixed campaigns are only available for pilot customers ([GetCustomerPilotFeatures](../customer-management-service/getcustomerpilotfeatures.md) returns 791).  
+> Mixed campaigns are only available for pilot customer accounts ([GetCustomerPilotFeatures](../customer-management-service/getcustomerpilotfeatures.md) or [GetAccountPilotFeatures](../customer-management-service/getaccountpilotfeatures.md) returns 791).  
 
 ## <a name="campaign-campaignservice"></a>Create the campaign
 You can create a mixed [campaign](../campaign-management-service/campaign.md) with the [AddCampaigns](../campaign-management-service/addcampaigns.md) operation. You can create a maximum of 100 mixed campaigns per ad account. 
